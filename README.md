@@ -1,5 +1,24 @@
 # NgDockerTemplate
 
+## Build Setup
+
+```bash
+# install dependencies
+$ npm install
+
+# serve with hot reload at http://localhost:3000
+$ npm start
+
+# generate static build at /build
+$ npm run build
+
+# generate static build and launch server (local at http://localhost:3000)
+$ npm run build:server
+
+# generate static build and launch server (requires Docker at http://localhost:3000)
+$ npm run build:docker
+```
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
 
 ## Development server

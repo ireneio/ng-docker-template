@@ -7,7 +7,13 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build:dockerenv": "cross-env npm run build && mv dist server/public",
+    "build:local": "cross-env npm run build && rimraf server/public/dist && mv dist server/public",
+    "docker:hub": "bash ./docker-build-push.sh",
+    "azure": "bash ./azure-deploy.sh",
+    "build:server": "npm run build:local && cd server && npm install && npm start",
+    "build:docker": "bash ./docker-build-run.sh ang-todomvc Dockerfile"
   },
   "private": true,
   "dependencies": {
